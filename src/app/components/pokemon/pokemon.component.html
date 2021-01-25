@@ -1,3 +1,25 @@
-<div>
-  {{ pokemon.name }}
-</div>
+<mat-card *ngIf="pokemon" class="pokemon">
+  <mat-card-header class="pokemon__header">
+    <mat-card-title class="header__name">{{ pokemon.name }}</mat-card-title>
+  </mat-card-header>
+  <img [src]="pokemon.sprites.other['official-artwork'].front_default" [alt]="pokemon.name" class="pokemon__image">
+  <!-- <img [src]="pokemon.sprites" [alt]="pokemon.name"> -->
+  <mat-card-content>
+    <!-- <mat-accordion>
+      <mat-expansion-panel (opened)="isOpen = true"
+                           (closed)="isOpen = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Variants
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="product__variants">
+          <p class="variant" *ngFor="let variant of product.variants; let lastItem = last">
+            <span class="variant__name">{{ variant.name }}</span>
+            <span class="variant__price">{{ variant.price | currency:'USD':'symbol':'1.2-2' }}</span>
+          </p>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion> -->
+  </mat-card-content>
+</mat-card>

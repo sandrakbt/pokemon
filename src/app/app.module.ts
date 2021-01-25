@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatListModule,
     MatToolbarModule,
+    MatCardModule,
   ],
   providers: [
     PokeService
