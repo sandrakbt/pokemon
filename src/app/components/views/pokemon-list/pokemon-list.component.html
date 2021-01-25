@@ -1,3 +1,4 @@
+<input #input (keyup)="handleInput(input.value)">
 <ul>
   <li *ngFor="let pokemon of pokemons">
     <app-pokemon  [pokemon]="pokemon"></app-pokemon>
