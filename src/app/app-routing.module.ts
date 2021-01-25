@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PokemonListComponent } from './components/views/pokemon-list/pokemon-list.component';
+import { PokemonListView } from './components/views/pokemon-list/pokemon-list.view';
 
 const routes: Routes = [
-  { path: '', component: PokemonListComponent },
+  { path: '', component: PokemonListView },
 ];
 
 @NgModule({

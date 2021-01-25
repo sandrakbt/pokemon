@@ -4,15 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PokeService } from 'src/app/services/poke.service';
 
 import { AppRoutingModule } from './app-routing.module';
-import { MainComponent } from './components/views/main/main.component';
+import { MainView } from './components/views/main/main.view';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
-import { PokemonListComponent } from './components/views/pokemon-list/pokemon-list.component';
+import { PokemonListView } from './components/views/pokemon-list/pokemon-list.view';
 
 @NgModule({
   declarations: [
-    MainComponent,
+    MainView,
     PokemonComponent,
-    PokemonListComponent
+    PokemonListView
   ],
   imports: [
     BrowserModule,
@@ -22,6 +22,6 @@ import { PokemonListComponent } from './components/views/pokemon-list/pokemon-li
   providers: [
     PokeService
   ],
-  bootstrap: [MainComponent]
+  bootstrap: [MainView]
 })
 export class AppModule { }

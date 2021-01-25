@@ -5,10 +5,10 @@ import { forkJoin } from 'rxjs';
 import debounce from 'lodash.debounce';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
-  templateUrl: './pokemon-list.component.html',
-  styleUrls: ['./pokemon-list.component.scss']
+  templateUrl: './pokemon-list.view.html',
+  styleUrls: ['./pokemon-list.view.scss']
 })
-export class PokemonListComponent implements OnInit {
+export class PokemonListView implements OnInit {
   pokemons: Pokemon[] = [];
   search = debounce(this.performSearch, 250);
 

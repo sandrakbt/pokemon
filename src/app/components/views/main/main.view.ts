@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  templateUrl: './main.view.html',
+  styleUrls: ['./main.view.scss']
 })
-export class MainComponent {
+export class MainView {
   title = 'poke-api';
   constructor() {}
 }
