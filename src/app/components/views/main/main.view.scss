@@ -1,0 +1,15 @@
+.header {
+  padding: 2rem;
+  &__title {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-content {
+  padding: 2rem;
+}

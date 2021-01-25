@@ -4,6 +4,7 @@ import { PokeService } from '../../../services/poke.service';
 import { forkJoin } from 'rxjs';
 import debounce from 'lodash.debounce';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Form, FormControl, FormGroup } from '@angular/forms';
 @Component({
   templateUrl: './pokemon-list.view.html',
   styleUrls: ['./pokemon-list.view.scss']
@@ -11,15 +12,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PokemonListView implements OnInit {
   pokemons: Pokemon[] = [];
   search = debounce(this.performSearch, 250);
+  form: FormGroup;
 
   constructor(
     private pokeService: PokeService,
     private route: ActivatedRoute,
     private router: Router,
-  ) {}
+  ) {
+    this.form = new FormGroup({
+      search: new FormControl('')
+    });
+  }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(({ search: term }) => {
+      this.form.get('search')?.setValue(term);
       if (term) {
         this.search(term);
       } else {
@@ -30,7 +37,7 @@ export class PokemonListView implements OnInit {
 
   handleInput(value: string): void {
     this.router.navigate([], {
-      queryParams: { search: value }
+      queryParams: value ? { search: value } : null
     });
   }
 
