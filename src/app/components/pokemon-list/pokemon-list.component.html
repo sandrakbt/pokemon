@@ -1,0 +1,11 @@
+<mat-paginator
+  [length]="pokeShorts.length"
+  [pageSize]="itemsPerPage"
+  [hidePageSize]="true"
+  (page)="handlePage($event)"
+></mat-paginator>
+<ul>
+  <li *ngFor="let pokemon of pokemons">
+    <app-pokemon [pokemon]="pokemon"></app-pokemon>
+  </li>
+</ul>

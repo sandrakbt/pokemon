@@ -4,8 +4,6 @@
     <input matInput formControlName="search" #input (keyup)="handleInput(input.value)">
   </mat-form-field>
 </form>
-<ul>
-  <li *ngFor="let pokemon of pokemons">
-    <app-pokemon [pokemon]="pokemon"></app-pokemon>
-  </li>
-</ul>
+<app-pokemon-list
+  [pokeShorts]="pokeShorts"
+></app-pokemon-list>
