@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "deploy": "ng build --prod --baseHref ./",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
