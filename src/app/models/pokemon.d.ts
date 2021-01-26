@@ -18,12 +18,14 @@ interface Sprite {
   }
 }
 
-type AbiShort = Reference & {
+type AbiShort = {
+  ability: Reference;
   is_hidden: boolean;
   slot: number;
 }
 
-type TypeShort = Reference & {
+type TypeShort = {
+  type: Reference;
   slot: number;
 }
 

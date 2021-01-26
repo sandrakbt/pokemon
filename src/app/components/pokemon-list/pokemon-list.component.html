@@ -4,8 +4,8 @@
   [hidePageSize]="true"
   (page)="handlePage($event)"
 ></mat-paginator>
-<ul>
-  <li *ngFor="let pokemon of pokemons">
+<ul class="poke-list">
+  <li *ngFor="let pokemon of pokemons" class="poke-list__item">
     <app-pokemon [pokemon]="pokemon"></app-pokemon>
   </li>
 </ul>

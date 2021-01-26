@@ -1,0 +1,27 @@
+<mat-card *ngIf="pokemon">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>{{ pokemon.name }}</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <img *ngIf="imageURL" [src]="imageURL" [alt]="pokemon.name" class="pokemon__image">
+    <p *ngIf="!imageURL">no image</p>
+    <section>
+      <h3>Types</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let type of pokemon.types">
+          {{ type.type.name }}
+        </mat-list-item>
+      </mat-list>
+    </section>
+    <section>
+      <h3>Abilities</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let ability of pokemon.abilities">
+          {{ ability.ability.name }}
+        </mat-list-item>
+      </mat-list>
+    </section>
+  </mat-card-content>
+</mat-card>

@@ -8,6 +8,7 @@ import { MainView } from './views/main/main.view';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonListView } from './views/pokemon-list/pokemon-list.view';
+import { PokemonView } from './views/pokemon/pokemon.view';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -22,6 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MainView,
     PokemonComponent,
     PokemonListView,
+    PokemonView,
     PokemonListComponent,
   ],
   imports: [

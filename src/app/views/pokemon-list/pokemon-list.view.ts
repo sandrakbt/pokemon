@@ -12,6 +12,7 @@ export class PokemonListView implements OnInit {
   form: FormGroup;
   pokeShorts: PokeShort[] = [];
   allPokeShorts: PokeShort[] = [];
+  searching = false;
 
   constructor(
     public pokeService: PokeService,
@@ -26,6 +27,7 @@ export class PokemonListView implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(({ search: term }) => {
       this.form.get('search')?.setValue(term);
+      this.searching = term;
       if (term) {
         this.search(term);
       } else {
@@ -33,7 +35,12 @@ export class PokemonListView implements OnInit {
       }
     });
 
-    this.pokeService.allPokemons.subscribe(pokeShorts => this.allPokeShorts = pokeShorts);
+    this.pokeService.allPokemons.subscribe(pokeShorts => {
+      this.allPokeShorts = pokeShorts;
+      if (!this.searching) {
+        this.loadPokemons();
+      }
+    });
   }
 
   handleInput(value: string): void {
