@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { map, mergeMap } from 'rxjs/operators';
-import { PokeService } from '../../../services/poke.service';
+import { PokeService } from '../../services/poke.service';
 import { forkJoin } from 'rxjs';
 import debounce from 'lodash.debounce';
 import { ActivatedRoute, Router } from '@angular/router';
